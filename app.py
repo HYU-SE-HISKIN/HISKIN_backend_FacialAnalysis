@@ -3,10 +3,10 @@ from PIL import Image
 import torch
 from torchvision import transforms
 from vit_pytorch import ViT
-from flask_cors import CORS
+from werkzeug.utils import secure_filename
+import os
 
 app = Flask(__name__)
-CORS(app)
 
 # Load the pre-trained model
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -51,7 +51,11 @@ def preprocess_image(image):
     img = img.unsqueeze(0)  # Add batch dimension
     return img.to(device)
 
-@app.route('/', methods=['POST'])
+@app.route('/', methods=['GET'])
+def index():
+    return "Hello, this is the index page!"
+
+@app.route('/predict', methods=['POST'])
 def predict():
     if 'file' not in request.files:
         return jsonify({'error': 'No file part'})
