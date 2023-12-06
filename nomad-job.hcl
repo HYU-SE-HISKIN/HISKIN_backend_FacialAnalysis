@@ -12,11 +12,7 @@ job "flask-app" {
         args    = ["-m", "flask", "run", "--host=0.0.0.0", "--port=8000"]
       }
 
-      resources {
-        cpu    = 250   # 0.1 vCPU
-        memory = 256   # 256 MB RAM
-        disk   = 2500  # 2 GB disk
-      }
+    
 
       env {
         FLASK_APP = "HISKIN_FA"  
