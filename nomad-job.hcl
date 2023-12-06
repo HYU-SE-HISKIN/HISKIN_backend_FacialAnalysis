@@ -9,7 +9,7 @@ job "flask-app" {
 
       config {
         command = "/usr/bin/python3"
-        args    = ["-m", "flask", "run", "--host=0.0.0.0", "--port=5000"]
+        args    = ["-m", "flask", "run", "--host=0.0.0.0", "--port=8000"]
       }
 
       resources {
