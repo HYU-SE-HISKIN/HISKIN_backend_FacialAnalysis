@@ -3,4 +3,4 @@ Pillow==10.1.0
 torchinfo==1.8.0
 vit-pytorch==1.6.4
 torch== 2.1.1
-torchvision==0.16.0
+torchvision==0.16.1
