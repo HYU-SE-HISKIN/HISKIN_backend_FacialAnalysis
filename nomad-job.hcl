@@ -13,9 +13,9 @@ job "flask-app" {
       }
 
       resources {
-        cpu    = 100   # 0.1 vCPU
+        cpu    = 250   # 0.1 vCPU
         memory = 256   # 256 MB RAM
-        disk   = 2000  # 2 GB disk
+        disk   = 2500  # 2 GB disk
       }
 
       env {
