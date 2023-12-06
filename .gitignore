@@ -1,5 +1,8 @@
 venv/
+myvenv/
 .idea/
+./dockerignore
+.pydistutils.cfg
 
 .DS_Store
 .env
